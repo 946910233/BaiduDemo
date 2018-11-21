@@ -1,0 +1,64 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\94691\\Desktop\\BaiduLoc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\94691\\Desktop\\BaiduLoc\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "3,4,8,6,7",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "92,151,309,211,259",
+                        "endColumns": "57,55,46,46,48",
+                        "endOffsets": "145,202,351,253,303"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,113,169,216,263",
+                        "endColumns": "57,55,46,46,48",
+                        "endOffsets": "108,164,211,258,307"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\94691\\Desktop\\BaiduLoc\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "5,3,16,11,12,10,17,4,14,31,38,32,13,15,8,6,9,7",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "157,56,808,454,502,404,914,104,617,1333,1568,1378,575,712,303,210,354,257",
+                        "endLines": "5,3,16,11,12,10,30,4,14,31,38,37,13,15,8,6,9,7",
+                        "endColumns": "52,47,105,47,72,49,28,52,94,44,68,17,41,95,50,46,49,45",
+                        "endOffsets": "205,99,909,497,570,449,1328,152,707,1373,1632,1563,612,803,349,252,399,298"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,27,28,29,30,31,37,38,39,40,41,42",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "312,365,413,519,567,640,690,1109,1162,1257,1302,1371,1561,1603,1699,1750,1797,1847",
+                        "endLines": "7,8,9,10,11,12,26,27,28,29,30,36,37,38,39,40,41,42",
+                        "endColumns": "52,47,105,47,72,49,28,52,94,44,68,17,41,95,50,46,49,45",
+                        "endOffsets": "360,408,514,562,635,685,1104,1157,1252,1297,1366,1556,1598,1694,1745,1792,1842,1888"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\94691\\Desktop\\BaiduLoc\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "6,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "191,522",
+                        "endLines": "12,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "481,679"
+                    },
+                    "to": {
+                        "startLines": "43,50",
+                        "startColumns": "4,4",
+                        "startOffsets": "1893,2184",
+                        "endLines": "49,52",
+                        "endColumns": "12,12",
+                        "endOffsets": "2179,2339"
+                    }
+                }
+            ]
+        }
+    ]
+}
