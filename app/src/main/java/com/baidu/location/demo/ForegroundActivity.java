@@ -6,7 +6,6 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -25,7 +24,7 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.DistanceUtil;
 
-import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 
 /**
@@ -65,12 +64,11 @@ public class ForegroundActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foreground);
 
-        initViews();
 
         // 定位初始化
         mClient = new LocationClient(this);
         LocationClientOption mOption = new LocationClientOption();
-        mOption.setScanSpan(5000);
+        mOption.setScanSpan(1000);//设定每1秒输出结果
         mOption.setCoorType("bd09ll");
         mOption.setIsNeedAddress(true);
         mOption.setOpenGps(true);
@@ -100,17 +98,7 @@ public class ForegroundActivity extends Activity {
             notification = builder.build(); // 获取构建好的Notification
         }
         notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mMapView.onDestroy();
-        mMapView = null;
-        mClient.disableLocInForeground(true);
-        mClient.unRegisterLocationListener(myLocationListener);
-        mClient.stop();
+        initViews();
     }
 
 
@@ -120,22 +108,22 @@ public class ForegroundActivity extends Activity {
         statusText = (TextView) findViewById(R.id.status);
         distanceText = (TextView) findViewById(R.id.distance);
         totalDistanceText = (TextView) findViewById(R.id.totalDistance);
-        mForegroundBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isEnableLocInForeground) {
-                    //关闭后台定位（true：通知栏消失；false：通知栏可手动划除）
-                    mClient.disableLocInForeground(true);
-                    isEnableLocInForeground = false;
-                    mForegroundBtn.setText(R.string.startforeground);
-                } else {
-                    //开启后台定位
-                    mClient.enableLocInForeground(1, notification);
-                    isEnableLocInForeground = true;
-                    mForegroundBtn.setText(R.string.stopforeground);
-                }
-            }
-        });
+        //        mForegroundBtn.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View v) {
+        //                if (isEnableLocInForeground) {
+        //                    //关闭后台定位（true：通知栏消失；false：通知栏可手动划除）
+        //                    mClient.disableLocInForeground(true);
+        //                    isEnableLocInForeground = false;
+        //                    mForegroundBtn.setText(R.string.startforeground);
+        //                } else {
+        //开启后台定位
+        mClient.enableLocInForeground(1, notification);
+        isEnableLocInForeground = true;
+        mForegroundBtn.setText(R.string.stopforeground);
+        //                }
+        //            }
+        //        });
         mMapView = (MapView) findViewById(R.id.mv_foreground);
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
@@ -184,24 +172,38 @@ public class ForegroundActivity extends Activity {
                 speed = 0;
             }
 
-            DecimalFormat df = new DecimalFormat("#.00");//保留两位小数
-            df.format(speed);
             totalDistance = distance + totalDistance;//每秒根据经纬度距离累加
-            df.format(distance);
+
+            NumberFormat nf = NumberFormat.getNumberInstance();
+            nf.setMaximumFractionDigits(2);
+
+
             System.out.println("总距离" + totalDistance);
             System.out.println("速度" + speed);
             System.out.println("状态" + status + "   " + "地址" + street);
             oldLatLng = latLng;
-            distanceText.setText("" + distance + "   " + "地址" + street);
-            totalDistanceText.setText("总" + totalDistance);
+            distanceText.setText("地址" + street);
+            totalDistanceText.setText("总" + nf.format(totalDistance));
             statusText.setText(status + "");
-            speedText.setText("速度" + speed);
+            speedText.setText("速度" + distance);
 
-            LatLng point = new LatLng(latitude, longitude);
+            LatLng point = new LatLng(latitude, longitude);//画点
 
             OverlayOptions dotOption = new DotOptions().center(point).color(0xAAFF0000);
             mBaiduMap.addOverlay(dotOption);
         }
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mMapView.onDestroy();
+        mMapView = null;
+        mClient.disableLocInForeground(true);
+        mClient.unRegisterLocationListener(myLocationListener);
+        mClient.stop();
+    }
+
 
 }

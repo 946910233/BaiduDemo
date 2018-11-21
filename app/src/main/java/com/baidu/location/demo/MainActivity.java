@@ -1,10 +1,5 @@
 package com.baidu.location.demo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.baidu.baidulocationdemo.R;
-
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -17,6 +12,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.baidu.baidulocationdemo.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /***
  * 本类代码同定位业务本身无关，负责现实列表
