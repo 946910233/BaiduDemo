@@ -32,7 +32,7 @@ public class NotificationUtils extends ContextWrapper {
         androidChannel.setLightColor(Color.GREEN);
         // Sets whether notifications posted to this channel appear on the lockscreen or not
         androidChannel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
-
+        androidChannel.shouldShowLights();
         getManager().createNotificationChannel(androidChannel);
 
     }

@@ -6,26 +6,23 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.2.0"
-    timestamp="1542771432351"
+    timestamp="1542810984630"
     token="9099064216562351445"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="327" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="9" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
+        duration="0" />
 
-    <artifact
-        location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
@@ -43,6 +40,9 @@
         type="SPLIT" />
     <artifact
         location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
@@ -65,11 +65,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1542771432351"
+        timestamp="1542810984630"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
@@ -87,6 +84,9 @@
             type="SPLIT" />
         <artifact
             location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\94691\Desktop\BaiduLoc\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"

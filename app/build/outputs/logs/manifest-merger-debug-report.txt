@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
 	package
 		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:1-76:12
 		INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:2:11-69
@@ -73,86 +73,94 @@ uses-permission#android.permission.WRITE_SETTINGS
 ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:29:5-30:23
 	android:name
 		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:29:22-70
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:32:5-75
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:32:22-72
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:33:5-78
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:33:22-76
 application
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:32:5-72:19
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:34:5-74:19
 	android:label
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:37:9-41
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:39:9-41
 	android:icon
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:35:9-45
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:37:9-45
 	android:allowBackup
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:34:9-35
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:36:9-35
 	android:theme
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:38:9-51
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:40:9-51
 	android:networkSecurityConfig
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:36:9-69
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:38:9-69
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:33:9-67
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:35:9-67
 service#com.baidu.location.f
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:41:9-45:19
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:43:9-47:19
 	android:process
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:44:13-38
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:46:13-38
 	android:enabled
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:43:13-35
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:45:13-35
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:42:13-48
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:44:13-48
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:49:9-51:64
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:51:9-53:64
 	android:value
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:51:13-61
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:53:13-61
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:50:13-52
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:52:13-52
 activity#com.baidu.location.demo.MainActivity
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:53:9-61:20
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:55:9-63:20
 	android:label
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:55:13-45
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:57:13-45
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:54:13-64
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:56:13-64
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:56:13-60:29
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:58:13-62:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:57:17-69
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:59:17-69
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:57:25-66
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:59:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:59:17-77
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:61:17-77
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:59:27-74
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:61:27-74
 activity#com.baidu.location.demo.LocationActivity
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:62:9-63:20
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:64:9-65:20
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:62:19-74
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:64:19-74
 activity#com.baidu.location.demo.LocationOption
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:64:9-84
-	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:64:19-72
-activity#com.baidu.location.demo.LocationFilter
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:65:9-84
-	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:65:19-72
-activity#com.baidu.location.demo.NotifyActivity
 ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:66:9-84
 	android:name
 		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:66:19-72
+activity#com.baidu.location.demo.LocationFilter
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:67:9-84
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:67:19-72
+activity#com.baidu.location.demo.NotifyActivity
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:68:9-84
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:68:19-72
 activity#com.baidu.location.demo.QuestActivity
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:67:9-83
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:69:9-83
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:67:19-71
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:69:19-71
 activity#com.baidu.location.demo.LocationAutoNotify
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:68:9-88
-	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:68:19-76
-activity#com.baidu.location.demo.IndoorLocationActivity
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:69:9-92
-	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:69:19-80
-activity#com.baidu.location.demo.ForegroundActivity
 ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:70:9-88
 	android:name
 		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:70:19-76
-activity#com.baidu.location.demo.IsHotWifiActivity
-ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:71:9-87
+activity#com.baidu.location.demo.IndoorLocationActivity
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:71:9-92
 	android:name
-		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:71:19-75
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:71:19-80
+activity#com.baidu.location.demo.ForegroundActivity
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:72:9-88
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:72:19-76
+activity#com.baidu.location.demo.IsHotWifiActivity
+ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:73:9-87
+	android:name
+		ADDED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml:73:19-75
 uses-sdk
 INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\94691\Desktop\BaiduLoc\app\src\main\AndroidManifest.xml

@@ -3,9 +3,11 @@ package com.baidu.location.demo;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -37,7 +39,6 @@ public class ForegroundActivity extends Activity {
     private MapView mMapView;
     private BaiduMap mBaiduMap;
     private Button mForegroundBtn;
-
     private NotificationUtils mNotificationUtils;
     private Notification notification;
 
@@ -52,20 +53,19 @@ public class ForegroundActivity extends Activity {
     private String street;
 
     private boolean isFirstLoc = true;
-    private boolean isEnableLocInForeground = false;
     private TextView speedText;
     private TextView totalDistanceText;
     private TextView statusText;
     private TextView distanceText;
-
+    private PowerManager pm;
+    private boolean screenOn;
+    private int gpsAccuracyStatus;
+    private int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.foreground);
-
-
-        // 定位初始化
         mClient = new LocationClient(this);
         LocationClientOption mOption = new LocationClientOption();
         mOption.setScanSpan(1000);//设定每1秒输出结果
@@ -75,6 +75,14 @@ public class ForegroundActivity extends Activity {
         mClient.setLocOption(mOption);
         mClient.registerLocationListener(myLocationListener);
         mClient.start();
+
+        pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        judge();
+        initViews();
+    }
+
+    private void judge() {
+        // 定位初始化
 
         //设置后台定位
         //android8.0及以上使用NotificationUtils
@@ -98,7 +106,7 @@ public class ForegroundActivity extends Activity {
             notification = builder.build(); // 获取构建好的Notification
         }
         notification.defaults = Notification.DEFAULT_SOUND; //设置为默认的声音
-        initViews();
+
     }
 
 
@@ -108,22 +116,10 @@ public class ForegroundActivity extends Activity {
         statusText = (TextView) findViewById(R.id.status);
         distanceText = (TextView) findViewById(R.id.distance);
         totalDistanceText = (TextView) findViewById(R.id.totalDistance);
-        //        mForegroundBtn.setOnClickListener(new View.OnClickListener() {
-        //            @Override
-        //            public void onClick(View v) {
-        //                if (isEnableLocInForeground) {
-        //                    //关闭后台定位（true：通知栏消失；false：通知栏可手动划除）
-        //                    mClient.disableLocInForeground(true);
-        //                    isEnableLocInForeground = false;
-        //                    mForegroundBtn.setText(R.string.startforeground);
-        //                } else {
-        //开启后台定位
-        mClient.enableLocInForeground(1, notification);
-        isEnableLocInForeground = true;
+
+        mClient.enableLocInForeground(1001, notification);
         mForegroundBtn.setText(R.string.stopforeground);
-        //                }
-        //            }
-        //        });
+
         mMapView = (MapView) findViewById(R.id.mv_foreground);
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
@@ -152,7 +148,8 @@ public class ForegroundActivity extends Activity {
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
 
-
+            gpsAccuracyStatus = bdLocation.getGpsAccuracyStatus();
+            System.out.println("gps精确度" + gpsAccuracyStatus);
             longitude = bdLocation.getLongitude();
             latitude = bdLocation.getLatitude();
             speed = bdLocation.getSpeed();
@@ -163,6 +160,23 @@ public class ForegroundActivity extends Activity {
             } else if (bdLocation.getLocType() == BDLocation.TypeNetWorkLocation) {
                 status = "网络定位";
             }
+
+            count++;
+            screenOn = pm.isScreenOn();
+            if (screenOn) {
+                count = 0;
+            }
+            if (!screenOn &&(count == 70||gpsAccuracyStatus==0)) {
+                // 获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+                PowerManager.WakeLock wl = pm.newWakeLock(
+                        PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                                PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "bright");
+                wl.acquire(10000); // 点亮屏幕
+                wl.release(); // 释放
+                return;
+            }
+            System.out.println("count=" + count);
+
 
             if (oldLatLng != null && latLng != null) {
                 distance = DistanceUtil.getDistance(oldLatLng, latLng);//两距离之差
@@ -180,7 +194,7 @@ public class ForegroundActivity extends Activity {
 
             System.out.println("总距离" + totalDistance);
             System.out.println("速度" + speed);
-            System.out.println("状态" + status + "   " + "地址" + street);
+            System.out.println("状态" + status);
             oldLatLng = latLng;
             distanceText.setText("地址" + street);
             totalDistanceText.setText("总" + nf.format(totalDistance));
@@ -192,6 +206,20 @@ public class ForegroundActivity extends Activity {
             OverlayOptions dotOption = new DotOptions().center(point).color(0xAAFF0000);
             mBaiduMap.addOverlay(dotOption);
         }
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("onStop");
+
+
     }
 
 
